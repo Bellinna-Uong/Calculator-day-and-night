@@ -1,0 +1,89 @@
+* {
+    padding: 0; /* espace intérieur */
+    margin: 0; /* espace extérieur */
+    box-sizing: border-box;
+    outline: 0; /* contour */
+    transition: all 0.5s ease; /*transition des thèmes*/
+}
+
+body {
+    font-family : sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #ffff;
+}
+
+body {
+    background-image: linear-gradient(to bottom right,#FCD0BC,#BB8668);
+}
+
+.app {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+.calculatrice {
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #000;
+}
+
+.changement-theme {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff; /*couleur du texte */
+    cursor: pointer; /* Change le curseur en une main lorsqu'on
+                    survole l'élément, indiquant qu'il est cliquable */
+    z-index: 1;
+}
+
+.changementtheme.actif {
+    color: #333; /* Change la couleur du texte à gris foncé (#333)
+                    lorsque l'élément a la classe active */
+}
+
+.changement-theme.actif::before {
+    background-color: #fff ; 
+}
+
+.changement-theme::before {
+    content: '';
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #333;
+    z-index:-1;
+}
+
+#display {
+    margin : 0 10px; /* pas d'espace haut-bas et 10px gauche-droite de l'élément*/
+    height : 150px; /*hauteur*/
+    width : auto; /*largeur ajustée automatiquement*/
+    max-width : 270px;
+    display : flex; /*disposition des éléments enfants de façon flexible*/
+    align-items : flex-end;
+    justify-content : flex-end;
+    font-size : 30px;
+    margin-bottom : 20px;
+    overflow-x : scroll;
+}
+
+#display::-webkit-scrollbar { /*Cible la barre de défilement spécifique aux navigateurs*/
+    display: block;
+    height: 3px;
+}
+
+button {
+    height: 60px;
+    width : 60px;
+}
