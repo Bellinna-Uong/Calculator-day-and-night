@@ -1,0 +1,68 @@
+<!--starter-->
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content="IE=edge">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "main.css"> <!--css est la référence de code pour le front-->
+    <title>Calculatrice</title> <!--choix du titre-->
+</head>
+<body>
+    <div class = "app">
+        <!-- dans la section app on va ajouter d'autre sections-->
+        <div class = "calculatrice nuit"> 
+            <div class = "changement-theme actif"> <!--pour changer de thème-->
+                <i class = "icon-theme"></i> <!-- bouton de changement de thème qu'on pourra styliser-->
+            </div> <!--on ferme la section de changement thème-->
+            <div class = "display-screen"> <!--on veut faire apparaître l'écran-->
+                <div id = "display"></div>
+        </div>
+        <div class = "buttons">
+            <table> <!--pour orrganiserr les boutons-->
+
+                <tr> <!--1re rangée de table-->
+                    <!-- on fait les boutons de calcul-->
+                    <td><button class="btn-operation" id="clear">C</button></td> 
+                    <td><button class="btn-operation" id="/">&divide;</button></td> 
+                    <td><button class="btn-operation" id="x">&times;</button></td> 
+                    <td><button class="btn-operation" id="backspace">←</button></td> 
+                </tr>
+
+                <tr> <!--2nd rangée-->
+                    <td><button class="btn-nombre" id="7">7</button></td>
+                    <td><button class="btn-nombre" id="8">8</button></td>
+                    <td><button class="btn-nombre" id="9">9</button></td>
+                    <td><button class="btn-operation" id="-">-</button></td>
+                </tr>
+
+                <tr> <!--3e rangée-->
+                    <td><button class="btn-nombre" id="4">4</button></td>
+                    <td><button class="btn-nombre" id="5">5</button></td>
+                    <td><button class="btn-nombre" id="6">6</button></td>
+                    <td><button class="btn-operation" id="+">+</button></td>
+                </tr>
+
+                <tr> <!--4e rangée-->
+                    <td><button class="btn-nombre" id="1">1</button></td>
+                    <td><button class="btn-nombre" id="2">2</button></td>
+                    <td><button class="btn-nombre" id="3">3</button></td>
+                    <td rowspan = "2"><button class="btn-egal" id="egal">=</button></td>
+                </tr>
+
+                <tr> <!--dernière rangée-->
+                    <td><button class="btn-nombre" id="00">00</button></td>
+                    <td><button class="btn-nombre" id="0">0</button></td>
+                    <td><button class="btn-nombre" id=".">.</button></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+
+    <script src="main.js"></script>  <!--on utilise javascript pour le corps-->
+</body>
+
+
+</html>
