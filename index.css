@@ -67,7 +67,7 @@ body {
 
 #display {
     margin : 0 10px; /* pas d'espace haut-bas et 10px gauche-droite de l'élément*/
-    height : 150px; /*hauteur*/
+    height : 100px; /*hauteur*/
     width : auto; /*largeur ajustée automatiquement*/
     max-width : 270px;
     display : flex; /*disposition des éléments enfants de façon flexible*/
@@ -83,7 +83,77 @@ body {
     height: 3px;
 }
 
-button {
+button { /*taille des bouttons*/
     height: 60px;
     width : 60px;
+    border: 0;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+button:hover { /*on va augmenter la taille du bouton quand on le survole avec la souris*/
+    transform: scale(1.1);
+}
+
+button#egal {
+    height: 130px;
+}
+
+/* light theme*/
+.calculatrice {
+    background-color: #fceded;
+}
+
+.calculatrice #display {
+    color: #0a1e23 ;
+}
+
+.calculatrice button#clear {
+    background-color: #c7acd0
+}
+
+.calculatrice button.btn-nombre {
+    background-color: #c7acd0 ;
+    color:#000;
+}
+
+.calculatrice button.btn-operation {
+    background-color: #d9e6d4; 
+    color: #000;
+}
+
+.calculatrice button.btn-egal {
+    background-color: #f3dfeb;
+    color: #000 ;
+}
+
+/* thème sombre */
+.calculatrice.nuit {
+    background-color: #465b71;
+}
+
+.calculatrice.nuit #display {
+    color: #0a1e23 ;
+}
+
+.calculatrice.nuit button#clear {
+    background-color: #b7a1a1;
+}
+
+.calculatrice.nuit button.btn-nombre {
+    background-color: #71969d ;
+    color:  #343333;
+}
+
+.calculatrice.nuit button.btn-operation {
+    background-color: #b7a1a1; 
+    color: #343333;
+}
+
+.calculatrice.nuit button.btn-egal {
+    background-color: #abb8b6;
+    color: #343333 ;
 }
